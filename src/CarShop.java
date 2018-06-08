@@ -26,4 +26,12 @@ public class CarShop {
         this.name = name;
         this.offers = offers;
     }
+
+    public List<Offer> addOffers (Offer... offers) {
+        List<Offer> offers1 = new ArrayList<>();
+        for (Offer offer:offers) {
+            offers1.add(offer);
+        }
+        return offers1;
+    }
 }
