@@ -2,16 +2,16 @@ import java.time.LocalDate;
 
 public class Car {
 
-    CarBrand brand;
-    String name;
-    CarType type;
-    double consumption;
-    double engineDisplacement;
-    int seats;
-    int enginePower;
-    LocalDate constructionDate;
-    boolean automatic;
-    Drive drive;
+    private CarBrand brand;
+    private String name;
+    private CarType type;
+    private double consumption;
+    private double engineDisplacement;
+    private int seats;
+    private int enginePower;
+    private LocalDate constructionDate;
+    private boolean automatic;
+    private Drive drive;
 
     public CarBrand getBrand() {
         return brand;
