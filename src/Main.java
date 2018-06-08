@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -17,6 +19,20 @@ public class Main {
         Offer offer4 = new Offer(car4,110.1,1.9);
         Offer offer5 = new Offer(car5,750.0,10.3);
         Offer offer6 = new Offer(car6,78.6,0.8);
+
+        List<Offer> offers= new ArrayList<Offer>();
+        offers.add(offer1);
+        offers.add(offer2);
+        offers.add(offer3);
+        offers.add(offer4);
+        offers.add(offer5);
+        offers.add(offer6);
+
+
+        CarShop carshop1 = new CarShop("SALON_1",offers);
+
+        System.out.println(carshop1.getFourWheelDrive());
+
 
 
 

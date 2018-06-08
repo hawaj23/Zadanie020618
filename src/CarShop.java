@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Spliterator;
+import java.util.stream.Collectors;
 
 public class CarShop {
-    String name;
+    private     String name;
 
     List<Offer> offers = new ArrayList<>();
 
@@ -34,4 +36,27 @@ public class CarShop {
         }
         return offers1;
     }
+
+    public List<Car> getCars() {
+        return offers.stream()
+                .map(Offer::getCar)
+                .collect(Collectors.toList());
+    }
+
+    public List<CarBrand> getCarBrands() {
+        return offers.stream()
+                .map(offer -> offer.getCar().getBrand())
+                .collect(Collectors.toList());
+    }
+
+    public List<Car> getFourWheelDrive() {
+        return offers.stream()
+                .map(Offer::getCar)
+                .filter(Car -> Car.getDrive().equals(Drive.FOURWHEEL))
+                .collect(Collectors.toList());
+    }
+
+
+
+
 }

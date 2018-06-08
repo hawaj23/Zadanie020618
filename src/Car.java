@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Car {
 
@@ -104,5 +105,21 @@ public class Car {
         this.constructionDate = constructionDate;
         this.automatic = automatic;
         this.drive = drive;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand=" + brand +
+                ", name='" + name + '\'' +
+                ", type=" + type +
+                ", consumption=" + consumption +
+                ", engineDisplacement=" + engineDisplacement +
+                ", seats=" + seats +
+                ", enginePower=" + enginePower +
+                ", constructionDate=" + constructionDate +
+                ", automatic=" + automatic +
+                ", drive=" + drive +
+                '}';
     }
 }
